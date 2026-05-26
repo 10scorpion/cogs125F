@@ -2,63 +2,206 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 transition-transform duration-200 hover:scale-110 cursor-pointer">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-100">
+      <main className="mx-auto flex max-w-6xl flex-col px-6 py-16">
+        
+        {/* HERO SECTION */}
+        <section className="flex flex-col items-start gap-6 py-20">
+          <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
+            UI / UX Designer
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+          <h1 className="max-w-3xl text-5xl font-bold leading-tight sm:text-6xl">
+            Hi, I’m Henry Khauv.
+          </h1>
+
+          <p className="max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+            Cognitive Science: Design and Interaction student at UC San Diego
+            passionate about creating intuitive, accessible, and user-centered
+            digital experiences through research, prototyping, and usability
+            testing.
+          </p>
+
+          <div className="flex flex-wrap gap-4 pt-4">
+            <a
+              href="https://henrykhauv.framer.website/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-black px-6 py-3 text-white transition hover:scale-105 dark:bg-white dark:text-black"
+            >
+              View Portfolio
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/henry-khauv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-zinc-300 px-6 py-3 transition hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </section>
+
+        {/* ABOUT SECTION */}
+        <section className="grid gap-12 border-t border-zinc-200 py-20 dark:border-zinc-800 md:grid-cols-2">
+          <div>
+            <h2 className="text-3xl font-semibold">About Me</h2>
+          </div>
+
+          <div className="space-y-6 text-zinc-600 dark:text-zinc-400">
+            <p>
+              I am currently pursuing a Bachelor’s degree in Cognitive Science:
+              Design and Interaction at the University of California, San Diego,
+              expected graduation in 2027.
+            </p>
+
+            <p>
+              My focus is on designing accessible and user-centered digital
+              experiences through research, wireframing, prototyping, and
+              usability testing.
+            </p>
+
+            <p>
+              I enjoy collaborating with teams, gathering user feedback, and
+              turning research insights into practical design improvements.
+            </p>
+          </div>
+        </section>
+
+        {/* SKILLS SECTION */}
+        <section className="border-t border-zinc-200 py-20 dark:border-zinc-800">
+          <h2 className="mb-10 text-3xl font-semibold">Skills</h2>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "Figma",
+              "Wireframing",
+              "Prototyping",
+              "User Flows",
+              "Usability Testing",
+              "Accessibility Design",
+              "Heuristic Evaluation",
+              "Communication",
+              "Team Collaboration",
+              "Problem Solving",
+              "Time Management",
+              "Adaptability",
+            ].map((skill) => (
+              <div
+                key={skill}
+                className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900"
+              >
+                <p className="font-medium">{skill}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* PROJECTS SECTION */}
+        <section className="border-t border-zinc-200 py-20 dark:border-zinc-800">
+          <h2 className="mb-10 text-3xl font-semibold">
+            Featured Projects
+          </h2>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            
+            {/* Project 1 */}
+            <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="mb-4 text-2xl font-semibold">
+                Provident Eye Specialist Website Redesign
+              </h3>
+
+              <p className="mb-6 leading-7 text-zinc-600 dark:text-zinc-400">
+                Redesigned a medical eye care website to improve usability,
+                accessibility, organization, and navigation using user-centered
+                design principles and Figma wireframes.
+              </p>
+
+              <ul className="space-y-2 text-sm text-zinc-500">
+                <li>• Accessibility-focused redesign</li>
+                <li>• Wireframing and layout concepts</li>
+                <li>• Iterative feedback and revisions</li>
+              </ul>
+            </div>
+
+            {/* Project 2 */}
+            <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="mb-4 text-2xl font-semibold">
+                Supporting Human Artists on Instagram
+              </h3>
+
+              <p className="mb-6 leading-7 text-zinc-600 dark:text-zinc-400">
+                Collaborated with a team to design a reporting and appeals
+                feature prototype addressing concerns around AI-generated
+                artwork on social media platforms.
+              </p>
+
+              <ul className="space-y-2 text-sm text-zinc-500">
+                <li>• User interviews and research</li>
+                <li>• Low-fidelity sketches and user flows</li>
+                <li>• Interactive Figma prototype</li>
+              </ul>
+            </div>
+
+            {/* Project 3 */}
+            <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="mb-4 text-2xl font-semibold">
+                UCSD Heuristics Analysis Class
+              </h3>
+
+              <p className="mb-6 leading-7 text-zinc-600 dark:text-zinc-400">
+                Conducted usability and heuristic evaluations on websites to
+                identify issues affecting discoverability, intuitiveness, and
+                learnability.
+              </p>
+
+              <ul className="space-y-2 text-sm text-zinc-500">
+                <li>• Heuristic evaluations</li>
+                <li>• In-person usability testing</li>
+                <li>• UX improvement recommendations</li>
+              </ul>
+            </div>
+
+            {/* Project 4 */}
+            <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="mb-4 text-2xl font-semibold">
+                Leadership & Team Experience
+              </h3>
+
+              <p className="mb-6 leading-7 text-zinc-600 dark:text-zinc-400">
+                Developed leadership, teamwork, adaptability, and communication
+                skills through collaborative environments including the U.S.
+                Navy Sea Cadets and customer-facing work experience.
+              </p>
+
+              <ul className="space-y-2 text-sm text-zinc-500">
+                <li>• Leadership development</li>
+                <li>• Time management</li>
+                <li>• Team collaboration</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT SECTION */}
+        <section className="border-t border-zinc-200 py-20 dark:border-zinc-800">
+          <h2 className="mb-6 text-3xl font-semibold">Contact</h2>
+
+          <div className="space-y-3 text-lg text-zinc-600 dark:text-zinc-400">
+            <p>Email: henrykhauv26@gmail.com</p>
+            <p>Phone: 915-888-5626</p>
+
+            <a
+              href="https://www.linkedin.com/in/henry-khauv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:underline"
+            >
+              linkedin.com/in/henry-khauv
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   );
